@@ -1,0 +1,31 @@
+http://music.163.com/song/media/outer/url?id=
+http://music.163.com/song/media/outer/url?id=27790408.mp3
+
+'''
+testvalues = list(test.values())
+print(testvalues)
+newvalues = list(new.values())
+for i in testvalues[:]:
+    if i in newvalues[:]:
+        print(i)
+        testvalues.remove(i)
+        newvalues.remove(i)
+print(testvalues)
+print(newvalues)
+if not os.path.exists(r"C:\Users\WBR1\Downloads\Music\NetEase\0"):
+    os.mkdir(r"C:\Users\WBR1\Downloads\Music\NetEase\0")
+'''
+
+
+def ask():
+    resstart = input("3" + " songs, download?\t[Y/n]\n")
+    if resstart == 'Y' or resstart == 'y':
+        isStart = True
+        print("Starting...")
+    elif resstart == 'n':
+        isStart = False
+        print("Stopping...")
+    else:
+        ask()
+    return isStart
+print(ask())
