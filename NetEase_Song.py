@@ -79,6 +79,7 @@ if os.path.getsize(basicinfo["downloadpath"] + "\\0\\songnamelist.txt") == 0:
 soup = BeautifulSoup(s.get(str(basicinfo["songlist"]), headers=headers).content, 'html.parser')
 soup = soup.ul
 songlist_raw = soup.find_all("a")
+#print(songlist_raw)
 
 for child in soup.children:
     songname = child.string
@@ -144,3 +145,5 @@ else:
 print("|","Written with love by WBR")
 log.close()
 songnamelist_file.close()
+
+input("| Press Enter to exit")
