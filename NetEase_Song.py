@@ -146,4 +146,4 @@ print("|","Written with love by WBR")
 log.close()
 songnamelist_file.close()
 
-input("| Press Enter to exit")
+input("| Press Enter to exit :)")
